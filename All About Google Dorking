@@ -1,0 +1,115 @@
+# G-Dorking 
+******* NOTE ********
+Following information is for knowledge transfer and must be used for ethical purpose only
+
+
+#WHAT IS GOOGLE DORK?
+A Google Dork, also known as Google Dorking or Google hacking, is a valuable resource for hackers and hustlers.
+For the average person, Google is just a search engine used to find text, images, videos, and news.
+However, in the underground world, Google is a useful hacking tool.
+
+Dorking is the practice of using Google to find vulnerable web applications and servers by using native Google search engine capabilities.
+Unless webmasters block specific resources from their website using a robots.txt file, Google indexes all the information that is present on any website.
+
+
+#GOOGLE DORK OPERATORS
+Google’s search engine has its own built-in query language. The following list of queries can be run to find a list of files, find information about your competition, track people, get information about SEO backlinks, build email lists, and of course, discover web vulnerabilities.
+
+Let’s look at the most popular Google Dorks and what they do.
+
+cache: this dork will show you the cached version of any website, e.g. cache: ebay.com
+allintext:  searches for specific text contained on any web page, e.g. allintext: hacking tools
+allintitle:  exactly the same as allintext, but will show pages that contain titles with C characters, e.g. allintitle:"Credit Cards"
+allinurl:  it can be used to fetch results whose URL contains all the specified characters, e.g: allinurl: client area
+filetype:  used to search for any kind of file extensions, for example, if you want to search for jpg files you can use: filetype: jpg
+inurl:  this is exactly the same as allinurl , but it is only useful for one single keyword, e.g. inurl: admin
+intitle:  used to search for various keywords inside the title, for example, intitle:credit cards, will search for titles beginning with “Credit” but “Cards” can be somewhere else in the page.
+inanchor:  this is useful when you need to search for an exact anchor text used on any links, e.g. inanchor:"credit cards"
+intext:  useful to locate pages that contain certain characters or strings inside their text, e.g. intext:"credit cards"
+link:  will show the list of web pages that have links to the specified URL, e.g. link: nike.com
+site:  will show you the full list of all indexed URLs for the specified domain and subdomain, e.g. site:nike.com
+*:  wildcard used to search pages that contain “anything”  before your word, e.g. how to * a website, will return “how to…” design/create/hack/card, etc… “a website”.
+|:  this is a logical operator, e.g. "carding" "tips" will show all the sites which contain “carding” or “tips,” or both words.
++:  used to concatenate words, useful to detect pages that use more than one specific key, e.g. security + trails
+–:  minus operator is used to avoiding showing results that contain certain words, e.g. carding -website will show pages that use “carding” in their text, but not those that have the word “website.”
+
+#GOOGLE DORK EXAMPLES
+Let’s take a look at some practical examples. You’ll be surprised how easy is to extract private information from any source just by using these Google hacking techniques.
+
+#Log Files
+ Error logs, access logs, and other types of application logs are often discovered inside the public HTTP space of websites. 
+ This can help attackers find the PHP version you’re running, as well as the critical system path of your CMS or frameworks.
+ 
+ For this kind of dork we can combine two Google operators, allintext and filetype, for example:
+ allintext:username filetype:log
+ 
+ This will show a lot of results that include username inside all *.log files.
+ 
+ #Vulnerable Web Servers
+ The following Google Dork can be used to detect vulnerable or hacked servers that allow appending 
+ 
+ inurl:/proc/self/cwd
+ 
+#Open FTP Servers
+Google does not only index HTTP-based servers, it also indexes open FTP servers.
+
+With the following dork, you’ll be able to explore public FTP servers, which can often reveal interesting things for the hustlers like you.
+
+intitle:"index of" inurl:ftp
+
+#ENV Files
+.env files are the ones used by popular web development frameworks to declare general variables and configurations for local and online dev environments.
+One of the recommended practices is to move these .env files to somewhere that isn’t publicly accessible. 
+However, as you will see, there are a lot of devs who don’t care about this and insert their .env file in the main public website directory.
+
+#SSH Private Keys
+SSH private keys are used to decrypt information that is exchanged in the SSH protocol. As a general security rule, 
+private keys must always remain on the system being used to access the remote SSH server, and shouldn’t be shared with anyone.
+
+With the following dork, you’ll be able to find SSH private keys that were indexed by Google.
+intitle:index.of id_rsa -id_rsa.pub
+Let’s move on to another interesting SSH Dork.
+If this isn’t your lucky day, and you’re using a Windows operating system with PUTTY SSH client, remember that this program always logs the usernames of your SSH connections.
+In this case, we can use a simple dork to fetch SSH usernames from PUTTY logs:
+
+filetype:log username putty
+
+#Email Lists
+It’s pretty easy to find email lists using Google Dorks. In the following example, we are going to fetch excel files that may contain a lot of email addresses.
+filetype:xls inurl:"email.xls"
+
+We filtered to check out only the .edu domain names and found a popular university with around 1800 emails from students and teachers.
+site:.edu filetype:xls inurl:"email.xls"
+
+#Live Cameras
+The following Google hacking techniques can help you fetch live camera web pages that are not restricted by IP.
+
+Here’s the dork to fetch various IP based cameras:
+inurl:top.htm inurl:currenttime
+
+To find WebcamXP-based transmissions:
+intitle:"webcamXP 5"
+
+And another one for general live cameras:
+inurl:"lvappl.htm"
+
+There are a lot of live camera dorks that can let you watch any part of the world, live. 
+You can find education, government, and even military cameras without IP restrictions.
+
+#MP3, Movie, and PDF files
+Nowadays almost no one downloads music after Spotify and Apple Music appeared on the market. However, 
+if you’re one of those classic individuals who still download legal music, you can use this dork to find mp3 files:
+
+intitle: index of mp3
+
+The same applies to legal free media files or PDF documents you may need:
+intitle: index of pdf
+intext: .mp4
+
+#weather
+Google hacking techniques can be used to fetch any kind of information, and that includes many different types of electronic devices connected to the Internet.
+In this case, we ran a dork that lets you fetch Weather Wing device transmissions. If you’re involved in meteorology stuff or merely curious, 
+check this out:
+intitle:"Weather Wing WS-2"
+ 
+ 
