@@ -1,0 +1,18 @@
+# G-Dorking
+WHAT IS GOOGLE DORK?
+A Google Dork, also known as Google Dorking or Google hacking, is a valuable resource for hackers and hustlers.
+For the average person, Google is just a search engine used to find text, images, videos, and news.
+However, in the underground world, Google is a useful hacking tool.
+
+Dorking is the practice of using Google to find vulnerable web applications and servers by using native Google search engine capabilities.
+Unless webmasters block specific resources from their website using a robots.txt file, Google indexes all the information that is present on any website.
+
+
+GOOGLE DORK OPERATORS
+Google’s search engine has its own built-in query language. The following list of queries can be run to find a list of files, find information about your competition, track people, get information about SEO backlinks, build email lists, and of course, discover web vulnerabilities.
+
+Let’s look at the most popular Google Dorks and what they do.
+
+cache: this dork will show you the cached version of any website, e.g. cache: ebay.com
+allintext:  searches for specific text contained on any web page, e.g. allintext: hacking tools
+
